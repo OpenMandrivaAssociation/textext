@@ -1,0 +1,44 @@
+%define name textext
+%define version 0.3.3
+%define release %mkrel 1
+
+Summary: Editable LaTeX objects for Inkscape
+Name: 	 %{name}
+Version: %{version}
+Release: %{release}
+Source0: %{name}-%{version}.tar.bz2
+License: BSD
+Group: 	 Graphics
+Url: 	 http://www.elisanet.fi/ptvirtan/software/textext/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch: noarch
+Requires: inkscape, tetex-latex 
+# Earlier revisions of pstoedit were not compiled with plot-svg support:
+Requires: pstoedit >= 3.45-3mdv2008.0
+
+%description
+Textext is an extension for Inkscape that allows one to insert text
+typeset with LaTeX into one's graphics. Unlike similar extensions such
+as Inklatex, Textext provides the ability to edit LaTeX objects after
+creation.
+
+%prep
+%setup -q -c %{name}-%{version}
+
+%install
+%__rm -rf %{buildroot}
+%__mkdir -p %{buildroot}%{_datadir}/inkscape/extensions
+
+ln -sf %{_datadir}/inkscape/extensions/inkex.py %{buildroot}%{_datadir}/inkscape/extensions/inkex45.py
+%__install -m 644 textext.inx %{buildroot}%{_datadir}/inkscape/extensions/
+%__install -m 755 textext.py %{buildroot}%{_datadir}/inkscape/extensions/
+
+%clean
+%__rm -rf %{buildroot}
+
+%files
+%defattr(-,root,root)
+%{_datadir}/inkscape/extensions/inkex45.py
+%{_datadir}/inkscape/extensions/textext.inx
+%{_datadir}/inkscape/extensions/textext.py
+
