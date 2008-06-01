@@ -1,6 +1,6 @@
 %define name textext
 %define version 0.4.2
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Editable LaTeX objects for Inkscape
 Name: 	 %{name}
@@ -12,7 +12,7 @@ Group: 	 Graphics
 Url: 	 http://www.elisanet.fi/ptvirtan/software/textext/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
-Requires: inkscape, tetex-latex, python-lxml
+Requires: inkscape >= 0.46, tetex-latex, python-lxml
 # Earlier revisions of pstoedit were not compiled with plot-svg support:
 Requires: pstoedit >= 3.45-5mdv2008.0
 
