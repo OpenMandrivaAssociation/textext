@@ -1,6 +1,6 @@
 %define name textext
-%define version 0.4.2
-%define release %mkrel 2
+%define version 0.4.3
+%define release %mkrel 1
 
 Summary: Editable LaTeX objects for Inkscape
 Name: 	 %{name}
