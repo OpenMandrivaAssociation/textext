@@ -1,6 +1,6 @@
 %define name textext
 %define version 0.4.4
-%define release %mkrel 2
+%define release 3
 
 Summary: Editable LaTeX objects for Inkscape
 Name: 	 %{name}
@@ -9,7 +9,7 @@ Release: %{release}
 Source0: %{name}-%{version}.tar.lzma
 License: BSD
 Group: 	 Graphics
-Url: 	 http://www.elisanet.fi/ptvirtan/software/textext/
+Url: 	 http://pav.iki.fi/software/textext/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 Requires: inkscape >= 0.46, tetex-latex, python-lxml
