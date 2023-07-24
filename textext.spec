@@ -5,7 +5,7 @@
 Summary: Editable LaTeX objects for Inkscape
 Name: 	 %{name}
 Version: %{version}
-Release: %{release}
+Release: %{release}1
 Source0: %{name}-%{version}.tar.lzma
 License: BSD
 Group: 	 Graphics
