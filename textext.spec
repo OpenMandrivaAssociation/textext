@@ -9,7 +9,7 @@ Release: %{release}1
 Source0: %{name}-%{version}.tar.lzma
 License: BSD
 Group: 	 Graphics
-Url: 	 http://www.elisanet.fi/ptvirtan/software/textext/
+Url: 	 https://www.elisanet.fi/ptvirtan/software/textext/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 Requires: inkscape >= 0.46, tetex-latex, python-lxml
